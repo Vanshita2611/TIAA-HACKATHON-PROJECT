@@ -68,6 +68,3 @@ To implement a different strategy context, see [SWRsimulationCE.py](SWRsimulatio
    - To calculate different metrics, override `eval_trial`.
    - See [optimize.ipynb](optimize.ipynb) for examples of running gradient-free optimizers to find retirement parameters that optimize a specified metric.
 
-Work-in-progress, YMMV. Open issues with any questions, suggestions. Pull requests are welcome.
-
-[Interactive app that does calculations and visualizations](https://druce.ai/swr-react/) ([React code](https://github.com/druce/swr-react))
