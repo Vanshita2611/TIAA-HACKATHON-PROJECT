@@ -21,44 +21,7 @@ Example (see [example.ipynb](example.ipynb)):
    - In this example, for each gamma value, we run optimizers to find the parameters (`stock_alloc`, `fixed_pct`, `variable_pct`, `floor_pct`) that would have maximized certainty-equivalent spending over all available 30-year retirement cohorts 1928-1991.
 
 	
-```python
-N_RET_YEARS = 30
-FIXED_PCT = 3.5
-VARIABLE_PCT = 1.0
-FLOOR_PCT = 0.0
-ALLOC_STOCKS = 0.75
-ALLOC_BONDS = 0.25
-GAMMA  = 1.0
 
-s = SWRsimulationCE({
-    'simulation': {'returns_df': real_return_df,
-                   'n_ret_years': N_RET_YEARS,
-                  },
-    'allocation': {'asset_weights': np.array([ALLOC_STOCKS, ALLOC_BONDS])}, 
-    'withdrawal': {'fixed_pct': FIXED_PCT,
-                   'variable_pct': VARIABLE_PCT,
-                   'floor_pct': FLOOR_PCT,
-                  },
-    'evaluation': {'gamma': GAMMA},
-    'visualization': {'histogram': True, 
-                      'chart_1' : {'title': 'Years to Exhaustion by Retirement Year',
-                                   'annotation': "Fixed spend %.1f, Variable spend %.1f, stocks %.1f%%" % (FIXED_PCT, 
-                                                                                                           VARIABLE_PCT, 
-                                                                                                           100 * ALLOC_STOCKS)
-                                  },
-                      'chart_2' : {'title': 'Spending By Retirement Year',
-                                  },
-                      'chart_3' : {'title': 'Portfolio Value By Retirement Year',
-                                  },
-                     }    
-    
-})
-
-s.simulate()
-
-s.visualize()
-
-```
 
 To implement a different strategy context, see [SWRsimulationCE.py](SWRsimulation/SWRsimulationCE.py), which inherits from [SWRsimulation.py](SWRsimulation/SWRsimulation.py). Override relevant methods:
 
