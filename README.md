@@ -1,5 +1,3 @@
-# TIAA-HACKATHON-PROJECT
-
 # swr - Safe Withdrawal for Retirement
 
 ![outcome.png](outcome.png)
