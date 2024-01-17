@@ -1,9 +1,9 @@
 DYNAMIC RETIREMENT INCOME PLANNING-SAFE WITHDRAWAL 
 
-![outcome.png](outcome.png)
-
-![optimal_by_gamma_table.png](optimal_by_gamma_table.png)
-
 LSTM+RF IS USED TO PREDICT SAFE WITHDRAWAL RATES.
+
+![image](https://github.com/Vanshita2611/TIAA-HACKATHON-PROJECT/assets/84024713/838646d0-ab47-431a-b343-f6da1606c09b)
+
+
 
 
